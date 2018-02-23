@@ -17,7 +17,7 @@ var banner = ['/*!\n',
 ].join('');
 
 // Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor-template', function() {
+gulp.task('vendortemplate', function() {
 
   // Bootstrap
   gulp.src([
@@ -35,26 +35,26 @@ gulp.task('vendor-template', function() {
       '!./node_modules/font-awesome/.*',
       '!./node_modules/font-awesome/*.{txt,json,md}'
     ])
-    .pipe(gulp.dest('./vendor-template/font-awesome'))
+    .pipe(gulp.dest('./vendortemplate/font-awesome'))
 
   // jQuery
   gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
-    .pipe(gulp.dest('./vendor-template/jquery'))
+    .pipe(gulp.dest('./vendortemplate/jquery'))
 
   // jQuery Easing
   gulp.src([
       './node_modules/jquery.easing/*.js'
     ])
-    .pipe(gulp.dest('./vendor-template/jquery-easing'))
+    .pipe(gulp.dest('./vendortemplate/jquery-easing'))
 
   // Vide.js
   gulp.src([
       './node_modules/vide/dist/*'
     ])
-    .pipe(gulp.dest('./vendor-template/vide'))
+    .pipe(gulp.dest('./vendortemplate/vide'))
 
 });
 
